@@ -1,0 +1,68 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+}
+
+body::before{
+    content: "";
+    position: absolute ; z-index: 1;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.login-form {
+    position: relative; z-index: 2;
+    
+}
+.login-form h1 {
+    font-size: 50px; color: green;
+    text-align: center;
+    cursor: pointer;
+}
+
+.int-area {width: 400px;}
+.int-area input {
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px; color: #fff;
+    outline: none;
+}
+
+.int-area label {
+    font-size: 18px; color: #999;
+}
+
+.int-area input:focus + label,
+.int-area input:valid + label {
+    top: -2px;
+    font-size: 13px; color: green;
+}
+
+.btn-area {margin-top: 30px;}
+.btn-area button {
+    width: 100%; height: 50px;
+    background: green;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.caption {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.caption a {
+    font-size: 15px; color: #999;
+    text-decoration: none;
+}
