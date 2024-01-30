@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/doJoin")
 public class MemberDoJoinServlet extends HttpServlet {
-    
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
@@ -33,7 +31,9 @@ public class MemberDoJoinServlet extends HttpServlet {
             String loginId = request.getParameter("loginId");
             String loginPw = request.getParameter("loginPw");
             String name = request.getParameter("name");
-
+            System.out.println("아이디:"+loginId);
+            System.out.println("비밀번호:"+loginPw);
+            System.out.println("비밀번호:"+name);
             SecSql sql = SecSql.from("INSERT INTO article");
             sql.append("SET regDate = NOW()");
             sql.append(", loginId = ?, loginId");
