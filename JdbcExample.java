@@ -4,12 +4,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class JdbcExample {
+public class JdbcExample {  
 
     public static void main(String[] args) {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/database_name";
-        String user = "your_username";
-        String password = "your_password";
+        String jdbcUrl = "jdbc:mysql://localhost:5500/login";
+        String user = "kmh";
+        String password = "0000";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
