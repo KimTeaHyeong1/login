@@ -16,7 +16,7 @@ public class MemberDoJoinServlet extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
 
         String driverName = Config.getDbDriverClassName();
-
+        System.out.println();
         try {
             Class.forName(driverName);
         } catch (ClassNotFoundException e) {
